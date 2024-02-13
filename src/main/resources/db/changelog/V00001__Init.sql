@@ -1,0 +1,3 @@
+SET search_path TO PUBLIC;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
