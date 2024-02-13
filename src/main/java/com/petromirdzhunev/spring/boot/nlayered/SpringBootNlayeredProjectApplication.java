@@ -9,5 +9,4 @@ public class SpringBootNlayeredProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootNlayeredProjectApplication.class, args);
 	}
-
 }

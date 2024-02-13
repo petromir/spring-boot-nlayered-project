@@ -13,7 +13,7 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=spring_boot_nlayered
+      - POSTGRES_DB=spring_boot_nlayered_service
     healthcheck:
       test: pg_isready -U root -d password
       start_period: 10s
