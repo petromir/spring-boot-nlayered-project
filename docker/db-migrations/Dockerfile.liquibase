@@ -1,0 +1,17 @@
+FROM liquibase:4.27.1-alpine
+
+# Change directory to project structure
+WORKDIR /app
+
+# Copy migrations and changelog (adjust paths if needed)
+COPY src/main/resources/db/changelog/* .
+
+# Use environment variables for database credentials and connection
+ENV LIQUIBASE_USERNAME=${DB_USERNAME}
+ENV LIQUIBASE_PASSWORD=${DB_PASSWORD}
+ENV LIQUIBASE_URL=${DB_URL}
+
+USER liquibase
+
+# Run Liquibase with environment variables
+CMD ["liquibase", "--changeLogFile", "changelog.xml", "--driver", "org.postgresql.Driver", "--username", "${LIQUIBASE_USERNAME}", "--password", "${LIQUIBASE_PASSWORD}", "--url", "${LIQUIBASE_URL}", "update"]

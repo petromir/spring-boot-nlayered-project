@@ -1,7 +1,7 @@
 # Main
 spring:
   config:
-    import: optional:classpath:.env.test[.properties]
+    import: optional:classpath:.env[.properties]
   application:
     name: spring-boot-nlayered-service
   mvc:
@@ -61,13 +61,31 @@ spring:
         log-level: trace
       file: ./docker/docker-compose.yaml
       lifecycle-management: start_only
+
+---
+spring:
+  config:
+    activate:
+      on-profile: liquibase
   liquibase:
-    change-log: classpath:db/changelog.xml
     # db hostname is added to /etc/hosts and should be automatically resolved in CI/CD environment
     url: ${DB_URL}
     user: ${DB_USERNAME},
     password: ${DB_PASSWORD},
     driver-class-name: org.postgresql.Driver
+
+---
+spring:
+  config:
+    activate:
+      on-profile: flyway
+  flyway:
+    # db hostname is added to /etc/hosts and should be automatically resolved in CI/CD environment
+    url: ${DB_URL}
+    user: ${DB_USERNAME},
+    password: ${DB_PASSWORD},
+    driver-class-name: org.postgresql.Driver
+    fail-on-missing-locations: true
 
 ---
 spring:
