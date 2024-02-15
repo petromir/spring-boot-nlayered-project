@@ -1,4 +1,4 @@
-FROM liquibase:4.27.1-alpine
+FROM liquibase/liquibase:4.26-alpine
 
 # Change directory to project structure
 WORKDIR /app
