@@ -1,4 +1,4 @@
-package com.petromirdzhunev.spring.boot.nlayered.repository;
+package com.petromirdzhunev.nlayered.repository;
 
 
 import org.jooq.impl.DSL;

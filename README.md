@@ -21,6 +21,10 @@ Running database migrations on application startup has some drawbacks:
 - Other instances may be blocked until the first one completes migrations
 - If you don't have redundancy, you get downtime during migration
   That being said, consider running migration automatically prior to deployment
+
+```shell
+docker run -e DB_USERNAME=root -e DB_PASSWORD=password -e DB_URL=jdbc:postgresql://db:5432/spring_boot_nlayered_service liquibase-migrations:0.0.2
+```
 #### Build
 ```shell
 docker build -t liquibase-migrations:<tag_version> -f docker/db-migrations/Dockerfile.liquibase .

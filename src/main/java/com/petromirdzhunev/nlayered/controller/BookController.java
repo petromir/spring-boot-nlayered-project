@@ -1,9 +1,9 @@
-package com.petromirdzhunev.spring.boot.nlayered.controller;
+package com.petromirdzhunev.nlayered.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.petromirdzhunev.spring.boot.nlayered.service.BookService;
+import com.petromirdzhunev.nlayered.service.BookService;
 
 import lombok.RequiredArgsConstructor;
 

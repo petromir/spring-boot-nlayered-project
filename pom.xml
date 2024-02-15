@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.petromirdzhunev</groupId>
-    <artifactId>spring-boot-nlayered-project</artifactId>
+    <artifactId>spring-boot-nlayered-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-nlayered-project</name>
-    <description>spring-boot-nlayered-project</description>
+    <description>spring-boot-nlayered-service</description>
     <properties>
         <java.version>21</java.version>
     </properties>

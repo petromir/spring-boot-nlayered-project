@@ -7,11 +7,11 @@ WORKDIR /app
 COPY src/main/resources/db/changelog/* .
 
 # Use environment variables for database credentials and connection
-ENV LIQUIBASE_USERNAME=${DB_USERNAME}
-ENV LIQUIBASE_PASSWORD=${DB_PASSWORD}
-ENV LIQUIBASE_URL=${DB_URL}
+ENV DB_USERNAME=root
+ENV DB_PASSWORD=postgres
+ENV DB_URL="jdbc:postgresql://db:5432/spring_boot_nlayered_service"
 
 USER liquibase
 
 # Run Liquibase with environment variables
-CMD ["liquibase", "--changeLogFile", "changelog.xml", "--driver", "org.postgresql.Driver", "--username", "${LIQUIBASE_USERNAME}", "--password", "${LIQUIBASE_PASSWORD}", "--url", "${LIQUIBASE_URL}", "update"]
+CMD ["bash", "-c", "liquibase --changeLogFile=db.changelog-master.xml --driver=org.postgresql.Driver --username=${DB_USERNAME} --password=${DB_PASSWORD} --url=${DB_URL} update"]
