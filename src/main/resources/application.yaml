@@ -95,3 +95,14 @@ spring:
   docker:
     compose:
       enabled: false # Disable docker-compose as dependencies should be initialized in a native way by CI/CD environment
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev,stage,prod
+  docker:
+    compose:
+      enabled: false # Disable docker-compose as dependencies should be initialized in a native way by CI/CD environment
+  liquibase:
+    enabled: false

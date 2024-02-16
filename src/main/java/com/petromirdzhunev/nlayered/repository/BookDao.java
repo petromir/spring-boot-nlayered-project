@@ -1,7 +1,6 @@
 package com.petromirdzhunev.nlayered.repository;
 
 
-import org.jooq.impl.DSL;
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
@@ -9,5 +8,5 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class BookDao {
-	private final DSL dsl;
+
 }

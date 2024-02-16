@@ -14,4 +14,4 @@ ENV DB_URL="jdbc:postgresql://db:5432/spring_boot_nlayered_service"
 USER liquibase
 
 # Run Liquibase with environment variables
-CMD ["bash", "-c", "liquibase --changeLogFile=db.changelog-master.xml --driver=org.postgresql.Driver --username=${DB_USERNAME} --password=${DB_PASSWORD} --url=${DB_URL} update"]
+CMD ["bash", "-c", "liquibase --changeLogFile=db.changelog-master.yaml --driver=org.postgresql.Driver --username=${DB_USERNAME} --password=${DB_PASSWORD} --url=${DB_URL} update"]
