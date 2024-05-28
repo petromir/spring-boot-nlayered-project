@@ -1,5 +1,8 @@
 # Spring Boot project using N-layered architecture
 
+## Status
+The project is still in very early phase and doesn't represent the final vision!
+
 ## Environment
 
 Java and Maven are managed by SDKMAN. To install the defined versions in `.sdkmanrc` file run the command:
