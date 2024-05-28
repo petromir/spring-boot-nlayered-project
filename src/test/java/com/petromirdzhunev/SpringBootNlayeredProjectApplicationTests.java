@@ -1,4 +1,4 @@
-package com.petromirdzhunev.spring.boot.nlayered;
+package com.petromirdzhunev;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,5 +1,4 @@
-package com.petromirdzhunev.nlayered.repository;
-
+package com.petromirdzhunev.repository;
 
 import org.springframework.stereotype.Component;
 

@@ -1,8 +1,8 @@
-package com.petromirdzhunev.nlayered.service;
+package com.petromirdzhunev.service;
 
 import org.springframework.stereotype.Service;
 
-import com.petromirdzhunev.nlayered.repository.BookDao;
+import com.petromirdzhunev.repository.BookDao;
 
 import lombok.RequiredArgsConstructor;
 
