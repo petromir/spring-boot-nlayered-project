@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
+        <version>3.3.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.petromirdzhunev</groupId>
-    <artifactId>spring-boot-nlayered-service</artifactId>
+    <artifactId>layered-by-technology-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-nlayered-project</name>
-    <description>spring-boot-nlayered-service</description>
+    <name>layered-by-technology-service</name>
+    <description>spring-boot-layered-by-technology-service</description>
     <properties>
         <java.version>21</java.version>
     </properties>
