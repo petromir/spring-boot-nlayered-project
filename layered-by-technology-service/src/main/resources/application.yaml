@@ -70,8 +70,8 @@ spring:
   liquibase:
     # db hostname is added to /etc/hosts and should be automatically resolved in CI/CD environment
     url: ${DB_URL}
-    user: ${DB_USERNAME},
-    password: ${DB_PASSWORD},
+    user: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
 ---
@@ -82,8 +82,8 @@ spring:
   flyway:
     # db hostname is added to /etc/hosts and should be automatically resolved in CI/CD environment
     url: ${DB_URL}
-    user: ${DB_USERNAME},
-    password: ${DB_PASSWORD},
+    user: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     fail-on-missing-locations: true
 
@@ -105,4 +105,6 @@ spring:
     compose:
       enabled: false # Disable docker-compose as dependencies should be initialized in a native way by CI/CD environment
   liquibase:
+    enabled: false
+  flyway:
     enabled: false
